@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#142333">
+<title>力学实验室 · 板块与传送带</title>
+<style>
+:root{color-scheme:light;--ink:#172536;--muted:#6d7d8d;--line:#dce4e8;--paper:#fff;--bg:#f3f6f5;--blue:#147d92;--orange:#ec8050;--green:#3c926c;--navy:#142333;--shadow:0 12px 32px #1b354414}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.top{background:var(--navy);color:#fff;padding:19px max(20px,calc((100vw - 1320px)/2));display:flex;align-items:center;gap:14px}.mark{width:42px;height:42px;border-radius:13px;background:#1f7181;display:grid;place-items:center;font-size:23px}.brand h1{font-size:19px;margin:0;letter-spacing:.04em}.brand p{margin:2px 0 0;color:#b8c8d0;font-size:12px}.top .tag{margin-left:auto;border:1px solid #ffffff36;color:#d9e8ec;border-radius:99px;padding:6px 12px;font-size:12px}.wrap{max-width:1320px;margin:0 auto;padding:24px 20px 50px}.intro{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:18px}.intro h2{margin:0;font-size:24px}.intro p{margin:6px 0 0;color:var(--muted)}.layout{display:grid;grid-template-columns:290px minmax(0,1fr);gap:18px;align-items:start}.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}.controls{padding:18px;position:sticky;top:14px}.section-title{font-size:14px;margin:0 0 12px;display:flex;align-items:center;gap:8px}.section-title:before{content:"";width:4px;height:17px;border-radius:4px;background:var(--orange)}.model-tabs{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:16px}.model-tabs button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:9px;color:var(--muted)}.model-tabs button.active{border-color:var(--blue);background:#eaf5f6;color:#105c69;font-weight:650}.field{display:grid;grid-template-columns:1fr 110px;gap:8px;align-items:center;margin:10px 0;color:#415261;font-size:13px}.field input{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 9px;background:#fff;color:var(--ink)}.field input:focus{outline:2px solid #147d9233;border-color:var(--blue)}.unit{color:#8b9aa5;font-size:11px}.divider{border:0;border-top:1px solid #edf0f1;margin:16px 0}.hint{font-size:12px;color:var(--muted);margin:10px 0;line-height:1.6}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.btn{border:1px solid var(--line);background:#fff;color:var(--ink);padding:9px 13px;border-radius:9px;font-weight:600}.btn:hover{border-color:#9bb2b8}.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}.btn.primary:hover{background:#20384c}.work{display:grid;gap:16px;min-width:0}.stage-head{padding:16px 18px 10px;display:flex;align-items:center;gap:10px}.stage-head h3{margin:0;font-size:15px}.stage-head .sub{margin-left:auto;color:var(--muted);font:12px ui-monospace,monospace}.scene-wrap{height:300px;background:#fbfcfa;border-top:1px solid #eef0ed;border-bottom:1px solid #eef0ed;position:relative}.scene-wrap canvas{width:100%;height:100%;display:block}.legend{display:flex;gap:16px;padding:11px 18px;color:var(--muted);font-size:12px}.legend span{display:flex;align-items:center;gap:6px}.dot{width:10px;height:10px;border-radius:3px;background:var(--orange)}.dot.belt{background:var(--blue)}.transport{padding:4px 18px 16px;display:grid;grid-template-columns:auto minmax(80px,1fr) 82px;align-items:center;gap:12px}.play-controls{display:flex;gap:6px}.iconbtn{width:36px;height:36px;border:1px solid var(--line);background:#fff;border-radius:9px}.iconbtn:hover{background:#f4f8f8}.transport input{width:100%;accent-color:var(--blue)}.time{font:12px ui-monospace,monospace;color:var(--muted);text-align:right}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;padding:0 18px 17px}.metric{border:1px solid #e8edef;border-radius:10px;padding:9px 11px;background:#fcfdfc}.metric span{display:block;color:var(--muted);font-size:11px}.metric b{font:600 16px ui-monospace,monospace}.plots{padding:16px 18px 18px}.plot-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.plot{border:1px solid #e8edef;border-radius:11px;overflow:hidden}.plot h4{font-size:12px;margin:0;padding:9px 11px;background:#fafcfc;color:#526571;border-bottom:1px solid #eef1f1}.plot canvas{display:block;width:100%;height:180px}.theory{padding:16px 18px}.theory p{margin:0;color:#596b77;font-size:13px}.theory strong{color:var(--ink)}.notice{margin-top:12px;padding:10px 12px;border-radius:9px;background:#f1f7f5;color:#456a5c;font-size:12px}.footer{text-align:center;color:#8b9aa5;font-size:12px;padding-top:24px}.hidden{display:none!important}@media(max-width:900px){.layout{grid-template-columns:1fr}.controls{position:static}.fields-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}.scene-wrap{height:260px}}@media(max-width:600px){.wrap{padding:16px 11px 35px}.top{padding:13px 14px}.top .tag{display:none}.intro{display:block}.intro h2{font-size:21px}.fields-grid{display:block}.metrics{grid-template-columns:1fr 1fr}.plot-grid{grid-template-columns:1fr}.scene-wrap{height:230px}.transport{grid-template-columns:auto minmax(50px,1fr) 65px;gap:7px;padding-left:12px;padding-right:12px}.stage-head,.legend,.plots,.theory{padding-left:13px;padding-right:13px}.controls{padding:15px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="mark" aria-hidden="true">∿</div><div class="brand"><h1>力学实验室</h1><p>用可视化理解运动与相互作用</p></div><div class="tag">高中物理 · 交互模拟</div></header>
+<main class="wrap">
+  <div class="intro"><div><h2>板块与传送带模型</h2><p>调整参数，观察物块运动、相对滑动与速度变化。</p></div></div>
+  <div class="layout">
+    <aside class="card controls">
+      <h3 class="section-title">实验设置</h3>
+      <div class="model-tabs" role="tablist" aria-label="选择物理模型"><button class="active" data-model="belt">传送带</button><button data-model="board">板块</button></div>
+      <div class="fields-grid">
+        <label class="field"><span>物块质量 <i class="unit">m</i></span><input id="m" type="number" min="0.01" step="0.1" value="1"></label>
+        <label class="field"><span>接触面长度 <i class="unit">L</i></span><input id="L" type="number" min="0.1" step="0.5" value="10"></label>
+        <label class="field"><span>动摩擦因数 <i class="unit">μ</i></span><input id="mu" type="number" min="0" step="0.05" value="0.2"></label>
+        <label class="field"><span>重力加速度 <i class="unit">g (m/s²)</i></span><input id="g" type="number" min="0.1" step="0.1" value="10"></label>
+        <label class="field"><span>物块初位置 <i class="unit">x₀ (m)</i></span><input id="x0" type="number" min="0" step="0.5" value="0"></label>
+        <label class="field"><span>物块初速度 <i class="unit">v₀ (m/s)</i></span><input id="v0" type="number" step="0.5" value="0"></label>
+        <label class="field" id="beltSpeedField"><span>传送带速度 <i class="unit">u (m/s)</i></span><input id="u" type="number" step="0.5" value="2"></label>
+        <label class="field hidden" id="boardMassField"><span>木板质量 <i class="unit">M (kg)</i></span><input id="M" type="number" min="0.01" step="0.5" value="3"></label>
+        <label class="field hidden" id="floorMuField"><span>板—地摩擦因数 <i class="unit">μ₂</i></span><input id="mu2" type="number" min="0" step="0.05" value="0"></label>
+        <label class="field hidden" id="boardVField"><span>木板初速度 <i class="unit">V₀ (m/s)</i></span><input id="V0" type="number" step="0.5" value="0"></label>
+      </div>
+      <hr class="divider">
+      <div class="actions"><button class="btn primary" id="run">重新计算</button><button class="btn" id="preset">恢复示例</button></div>
+      <p class="hint">正方向向右。传送带模型采用水平面；板块模型中木板可在水平地面上运动。物块离开接触面后停止计入接触运动。</p>
+      <div class="notice">模拟采用小时间步数值积分；图表与动画来自同一组计算数据。</div>
+    </aside>
+    <section class="work" aria-label="模拟结果">
+      <div class="card">
+        <div class="stage-head"><h3>运动演示</h3><span class="sub" id="status">准备就绪</span></div>
+        <div class="scene-wrap"><canvas id="scene" aria-label="物块与��送带运动动画"></canvas></div>
+        <div class="legend"><span><i class="dot"></i>物块</span><span id="carrierLegend"><i class="dot belt"></i>传送带</span></div>
+        <div class="transport"><div class="play-controls"><button class="iconbtn" id="reset" title="回到起点" aria-label="回到起点">↺</button><button class="btn primary" id="play">▶ 播放</button></div><input id="timeline" type="range" min="0" max="1000" value="0" aria-label="模拟时间"><output class="time" id="time">t = 0.00 s</output></div>
+        <div class="metrics"><div class="metric"><span>物块位置 x</span><b id="mx">0.00 m</b></div><div class="metric"><span>物块速度 v</span><b id="mv">0.00 m/s</b></div><div class="metric"><span>加速度 a</span><b id="ma">0.00 m/s²</b></div><div class="metric"><span>相对速度 v − u</span><b id="mr">−2.00 m/s</b></div></div>
+      </div>
+      <div class="card plots"><h3 class="section-title">运动图像</h3><div class="plot-grid"><div class="plot"><h4>位置 — 时间（x-t）</h4><canvas id="chartX"></canvas></div><div class="plot"><h4>速度 — 时间（v-t）</h4><canvas id="chartV"></canvas></div></div></div>
+      <div class="card theory"><h3 class="section-title">物理提示</h3><p id="explanation">传送带与物块有相对运动时，滑动摩擦力使物块加速；当二者速度相同后，物块随传送带一起运动。</p></div>
+    </section>
+  </div>
+  <div class="footer">交互式物理学习工具 · 参数仅保存在当前页面</div>
+</main>
+<script>
+'use strict';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+let model='belt', samples=[], duration=0, current=0, playing=false, lastFrame=0, raf=0;
+const dt=0.01;
+function num(id, fallback){const v=Number($('#'+id).value);return Number.isFinite(v)?v:fallback}
+function params(){return {m:Math.max(.01,num('m',1)),L:Math.max(.1,num('L',10)),mu:Math.max(0,num('mu',.2)),g:Math.max(.1,num('g',10)),x0:num('x0',0),v0:num('v0',0),u:num('u',2),M:Math.max(.01,num('M',3)),mu2:Math.max(0,num('mu2',0)),V0:num('V0',0)}}
+function calculate(){const p=params();p.x0=Math.max(0,Math.min(p.L,p.x0));let x=p.x0,v=p.v0,B=0,V=p.V0;const maxT=30,steps=Math.round(maxT/dt);samples=[];let active=true;
+ for(let i=0;i<=steps;i++){const t=i*dt;let a=0,rel=0;if(active){if(model==='belt'){rel=v-p.u;if(Math.abs(rel)>1e-5)a=-Math.sign(rel)*p.mu*p.g;else if(Math.abs(p.u)>1e-5){a=Math.sign(p.u)*p.mu*p.g;rel=v-p.u;}else a=0;}else{rel=v-V;const n=p.m*p.g, fmax=p.mu*n, floor=p.mu2*(p.m+p.M)*p.g;let friction=0, boardForce=0;if(Math.abs(rel)>1e-5){friction=-Math.sign(rel)*fmax;boardForce=-friction;}else{const desired=0;friction=Math.max(-fmax,Math.min(fmax,desired));boardForce=-friction;}a=friction/p.m;let aB=boardForce/p.M;if(Math.abs(V)>1e-5)aB-=Math.sign(V)*floor/p.M;else if(Math.abs(boardForce)>floor)aB-=Math.sign(boardForce)*floor/p.M;else aB=0;
+ // A stationary relative pair moves together when available friction can prevent slip.
+ if(Math.abs(rel)<=1e-5){const common=(p.m*a+p.M*aB)/(p.m+p.M);const needed=p.m*common;if(Math.abs(needed)<=fmax+1e-7){a=common;aB=common;}}
+ B=aB;}
+ } else {a=0;rel=0;}
+ samples.push({t,x,v,a,B,V,rel,active});if(!active)continue;
+ if(model==='belt'){v+=a*dt;x+=v*dt;if(x<0){x=0;if(v<0)v=0}if(x>p.L){x=p.L;if(v>0)v=0;active=false}}
+ else{v+=a*dt;V+=B*dt;x+=v*dt; // board coordinate B is its left edge
+ if(x<B){x=B;v=Math.min(v,V)}if(x>B+p.L){x=B+p.L;v=Math.max(v,V)}
+ if(B>p.L+2*p.L||B<-2*p.L)active=false;
+ }
+ if(t>0&&i>10&&((model==='belt'&&Math.abs(v-p.u)<1e-5)||(model==='board'&&Math.abs(v-V)<1e-5&&Math.abs(B)<1e-5&&Math.abs(V)<1e-5))){ // preserve a short visible co-motion tail; then hold at computed state
+   if(t>8)active=false;
+ }
+ }
+ duration=samples.at(-1)?.t||0; if(duration<1)duration=1; $('#timeline').value='0';current=0;drawAll();updateAt(0);drawScene();}
+function resizeCanvas(c){const r=c.getBoundingClientRect(),d=window.devicePixelRatio||1,w=Math.max(1,Math.round(r.width*d)),h=Math.max(1,Math.round(r.height*d));if(c.width!==w||c.height!==h){c.width=w;c.height=h}const x=c.getContext('2d');x.setTransform(d,0,0,d,0,0);return {ctx:x,w:r.width,h:r.height}}
+function drawScene(){const c=$('#scene'),{ctx,w,h}=resizeCanvas(c);ctx.clearRect(0,0,w,h);ctx.fillStyle='#fbfcfa';ctx.fillRect(0,0,w,h);const p=params(),pad=42,ground=h*.73,worldL=p.L;let scale=Math.min((w-pad*2)/worldL,34);scale=Math.max(4,scale);const baseX=pad;const s=samples[Math.min(samples.length-1,Math.round(current/dt))]||{x:p.x0,V:p.V0};const bx=model==='board'?s.B:0;
+ ctx.strokeStyle='#c9d4d7';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(20,ground+20);ctx.lineTo(w-20,ground+20);ctx.stroke();ctx.fillStyle='#d5e0e1';ctx.fillRect(baseX+bx*scale,ground,p.L*scale,14);ctx.fillStyle=model==='belt'?'#147d92':'#8aa5a9';ctx.fillRect(baseX+bx*scale,ground,p.L*scale,5);
+ if(model==='belt'){ctx.strokeStyle='#8cc0c5';ctx.lineWidth=1;for(let xx=baseX+bx*scale+8;xx<baseX+(bx+p.L)*scale;xx+=20){ctx.beginPath();ctx.moveTo(xx,ground+8);ctx.lineTo(xx+8,ground+14);ctx.stroke()}}
+ const xx=baseX+s.x*scale, bw=34,bh=27;ctx.fillStyle='#ec8050';ctx.beginPath();ctx.roundRect(xx-bw/2,ground-bh,bw,bh,5);ctx.fill();ctx.fillStyle='#fff4ef';ctx.beginPath();ctx.arc(xx,ground-bh/2,4,0,Math.PI*2);ctx.fill();
+ // velocity arrow
+ const vel=s.v, arrow=Math.max(-85,Math.min(85,vel*13));if(Math.abs(arrow)>3){const y=ground-bh-16;ctx.strokeStyle='#d56e3e';ctx.fillStyle='#d56e3e';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(xx,y);ctx.lineTo(xx+arrow,y);ctx.stroke();ctx.beginPath();ctx.moveTo(xx+arrow,y);ctx.lineTo(xx+arrow-Math.sign(arrow)*7,y-4);ctx.lineTo(xx+arrow-Math.sign(arrow)*7,y+4);ctx.closePath();ctx.fill()}
+ ctx.fillStyle='#5e707b';ctx.font='12px system-ui';ctx.textAlign='left';ctx.fillText('x = '+s.x.toFixed(2)+' m',baseX,24);ctx.textAlign='right';ctx.fillText(model==='belt'?'传送带':'木板',Math.min(w-20,baseX+(bx+p.L)*scale),ground+37);
+}
+function drawChart(id,key,color){const c=$(id),{ctx,w,h}=resizeCanvas(c);ctx.clearRect(0,0,w,h);const left=38,right=10,top=12,bottom=25,pw=w-left-right,ph=h-top-bottom;ctx.font='10px system-ui';ctx.strokeStyle='#e6ecee';ctx.fillStyle='#82919a';ctx.lineWidth=1;
+ let vals=samples.filter((_,i)=>i%Math.max(1,Math.floor(samples.length/250))===0).map(s=>s[key]);if(!vals.length)return;let lo=Math.min(...vals),hi=Math.max(...vals);if(Math.abs(hi-lo)<1e-6){lo-=1;hi+=1}else{const pad=(hi-lo)*.12;lo-=pad;hi+=pad}const tEnd=Math.max(duration,1);for(let j=0;j<=4;j++){const y=top+ph*j/4;ctx.beginPath();ctx.moveTo(left,y);ctx.lineTo(w-right,y);ctx.stroke();const val=hi-(hi-lo)*j/4;ctx.fillText(val.toFixed(1),2,y+3)}ctx.strokeStyle='#cbd5d8';ctx.beginPath();ctx.moveTo(left,top);ctx.lineTo(left,top+ph);ctx.lineTo(w-right,top+ph);ctx.stroke();ctx.fillText('0',left-3,h-6);ctx.textAlign='right';ctx.fillText(tEnd.toFixed(0)+' s',w-right,h-6);ctx.textAlign='left';ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();let started=false;const stride=Math.max(1,Math.floor(samples.length/600));for(let i=0;i<samples.length;i+=stride){const s=samples[i],x=left+s.t/tEnd*pw,y=top+(hi-s[key])/(hi-lo)*ph;if(!started){ctx.moveTo(x,y);started=true}else ctx.lineTo(x,y)}ctx.stroke();const px=left+current/tEnd*pw;ctx.strokeStyle='#ec8050';ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(px,top);ctx.lineTo(px,top+ph);ctx.stroke();ctx.setLineDash([])}
+function drawAll(){drawScene();drawChart('#chartX','x','#147d92');drawChart('#chartV','v','#ec8050')}
+function updateAt(t){current=Math.max(0,Math.min(duration,t));const s=samples[Math.min(samples.length-1,Math.round(current/dt))];if(!s)return;$('#timeline').value=String(Math.round(current/duration*1000));$('#time').value='t = '+s.t.toFixed(2)+' s';$('#mx').textContent=s.x.toFixed(2)+' m';$('#mv').textContent=s.v.toFixed(2)+' m/s';$('#ma').textContent=s.a.toFixed(2)+' m/s²';const carrier=model==='belt'?params().u:s.V;$('#mr').textContent=(s.v-carrier).toFixed(2)+' m/s';$('#status').textContent=s.active?'运动中':'接触运动结束';drawScene();drawChart('#chartX','x','#147d92');drawChart('#chartV','v','#ec8050')}
+function frame(ts){if(!playing)return;if(!lastFrame)lastFrame=ts;const elapsed=Math.min(.1,(ts-lastFrame)/1000);lastFrame=ts;const speed=1;updateAt(current+elapsed*speed);if(current>=duration){playing=false;$('#play').textContent='▶ 播放';return}raf=requestAnimationFrame(frame)}
+function toggleModel(next){model=next;$$('.model-tabs button').forEach(b=>b.classList.toggle('active',b.dataset.model===model));$('#beltSpeedField').classList.toggle('hidden',model!=='belt');$('#boardMassField').classList.toggle('hidden',model!=='board');$('#floorMuField').classList.toggle('hidden',model!=='board');$('#boardVField').classList.toggle('hidden',model!=='board');$('#carrierLegend').lastChild.textContent=model==='belt'?'传送带':'木板';$('#explanation').innerHTML=model==='belt'?'传送带与物块有相对运动时，滑动摩擦力使物块加速；当二者速度相同后，物块随传送带一起运动。':'物块与木板间的摩擦力会同时改变两者的速度；木板与地面间的摩擦力影响系统整体运动。';calculate()}
+$$('.model-tabs button').forEach(b=>b.addEventListener('click',()=>toggleModel(b.dataset.model)));$('#run').addEventListener('click',()=>{playing=false;$('#play').textContent='▶ 播放';calculate()});$('#preset').addEventListener('click',()=>{if(model==='belt'){Object.assign({});$('#m').value=1;$('#L').value=10;$('#mu').value=.2;$('#g').value=10;$('#x0').value=0;$('#v0').value=0;$('#u').value=2}else{$('#m').value=1;$('#L').value=3;$('#mu').value=.3;$('#g').value=10;$('#x0').value=0;$('#v0').value=4;$('#M').value=3;$('#mu2').value=0;$('#V0').value=0}calculate()});$('#play').addEventListener('click',()=>{if(playing){playing=false;cancelAnimationFrame(raf);$('#play').textContent='▶ 播放'}else{if(current>=duration)updateAt(0);playing=true;lastFrame=0;$('#play').textContent='❚❚ 暂停';raf=requestAnimationFrame(frame)}});$('#reset').addEventListener('click',()=>{playing=false;$('#play').textContent='▶ 播放';updateAt(0)});$('#timeline').addEventListener('input',e=>{playing=false;$('#play').textContent='▶ 播放';updateAt(Number(e.target.value)/1000*duration)});['m','L','mu','g','x0','v0','u','M','mu2','V0'].forEach(id=>$('#'+id).addEventListener('change',()=>{playing=false;calculate()}));window.addEventListener('resize',drawAll);calculate();
+</script>
+</body>
+</html>
